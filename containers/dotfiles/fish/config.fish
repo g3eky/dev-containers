@@ -5,7 +5,7 @@ if status is-interactive
 end
 
 # Globals
-# set -Ux tmux_conf ~/.config/tmux/tmux.conf
+set -Ux tmux_conf ~/.config/tmux/tmux.conf
 set -Ux STARSHIP_CONFIG ~/.config/starship/starship.toml
 
 

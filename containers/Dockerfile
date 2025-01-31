@@ -14,7 +14,7 @@ RUN apk upgrade
 RUN apk add sudo bash curl git
 
 # Adding shell, tmux, starship
-RUN apk add fish starship
+RUN apk add fish starship tmux
 
 # Neovim
 RUN apk add neovim
@@ -36,6 +36,10 @@ COPY --chown=$USERNAME:$USERNAME dotfiles/fish $CONFIG_FOLDER/fish/
 ## Copying starship config
 RUN rm -rf $CONFIG_FOLDER/starship/
 COPY --chown=$USERNAME:$USERNAME dotfiles/starship $CONFIG_FOLDER/starship/
+
+## Copying tmux config
+RUN rm -rf $CONFIG_FOLDER/tmux/
+COPY --chown=$USERNAME:$USERNAME dotfiles/tmux $CONFIG_FOLDER/tmux/
 
 
 USER $USERNAME
