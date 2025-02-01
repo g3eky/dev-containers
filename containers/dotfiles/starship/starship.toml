@@ -6,7 +6,7 @@ palette = 'catppuccin'
 
 
 format = '''
-[┌](bold surface1) [ 󰡨 ](bold bg:red fg:surface0)[ $directory ](bg:peach)[](fg:peach bg:surface0)[$git_branch$git_commit](bold fg:blue bg:surface0)[](fg:surface0 bg:base) $fill [[](fg:surface0 bg:base)$conda](bold fg:yellow bg:surface0)[[](fg:rosewater bg:surface0) $time ](bold bg:rosewater)[┐](bold surface1)
+[┌](bold surface1)[ 󰡨 ](bold bg:yellow fg:red)[ $directory ](bg:peach)[](fg:peach bg:surface0)[$git_branch$git_commit](bold fg:blue bg:surface0)[](fg:surface0 bg:base) $fill [[](fg:surface0 bg:base)$conda](bold fg:yellow bg:surface0)[[](fg:rosewater bg:surface0) $time ](bold bg:rosewater)[┐](bold surface1)
 [└](bold surface1) $username $character
 '''
 

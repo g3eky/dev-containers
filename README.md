@@ -19,9 +19,14 @@ Containers that can be used for development
     - [x] File navigation
     - [x] Bottom status line
     - [x] Tab line
-    - [ ] Auto complete
+    - [x] Auto complete suggestions
+        - [x] LSP
+        - [x] Buffer
+        - [x] Calculator
     - [ ] LSP
-        - [ ] C
+        - [x] C
     - [ ] DAP
         - [ ] C
+    - [x] Autopairs
+    - [x] Git integration
 

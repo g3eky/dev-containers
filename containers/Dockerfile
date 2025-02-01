@@ -19,6 +19,9 @@ RUN apk add fish starship tmux
 # Addding necessary man pages
 RUN apk add man-db man-pages-posix
 
+# Adding C compiler, debugger, headers and language server
+RUN apk add gcc gdb musl-dev clang-dev
+
 # Adding neovim and its dependencies
 RUN apk add ripgrep fzf luarocks
 RUN apk add neovim neovim-doc

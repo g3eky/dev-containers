@@ -5,8 +5,9 @@
 require("core")
 
 -- lazy plugin manager setup
-require("pluginmanager")
+require("plugin-setup")
 
--- store all plugins
--- require("plugins")
+-- all lsp configuration details
+require("lsp-configs")
+
 
