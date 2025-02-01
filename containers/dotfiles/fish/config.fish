@@ -1,6 +1,6 @@
 
 if status is-interactive
-  alias tree="tree -AC"
+  # alias tree="tree -AC"
   alias vim="nvim"
 end
 

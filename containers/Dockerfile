@@ -16,8 +16,12 @@ RUN apk add sudo bash curl git
 # Adding shell, tmux, starship
 RUN apk add fish starship tmux
 
-# Neovim
-RUN apk add neovim
+# Addding necessary man pages
+RUN apk add man-db man-pages-posix
+
+# Adding neovim and its dependencies
+RUN apk add ripgrep fzf luarocks
+RUN apk add neovim neovim-doc
 
 # Create user
 RUN adduser -D -s /usr/bin/fish $USERNAME
@@ -41,9 +45,16 @@ COPY --chown=$USERNAME:$USERNAME dotfiles/starship $CONFIG_FOLDER/starship/
 RUN rm -rf $CONFIG_FOLDER/tmux/
 COPY --chown=$USERNAME:$USERNAME dotfiles/tmux $CONFIG_FOLDER/tmux/
 
+## Setting up neovim
+RUN rm -rf $CONFIG_FOLDER/nvim/
+COPY --chown=$USERNAME:$USERNAME dotfiles/nvim $CONFIG_FOLDER/nvim/
+
 
 USER $USERNAME
 WORKDIR /home/$USERNAME
+
+## Load neovim once
+RUN nvim --headless -c "lua print('Loaded neovim plugins')" -c "q"
 
 # Unsetting ENV
 ENV USERNAME=

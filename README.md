@@ -9,4 +9,5 @@ Containers that can be used for development
 - [ ] Figure out users, mounts and permissions
 - [ ] Figure out builds for different architectures
 - [ ] Figure out light and dark modes
+- [ ] Figure out how to make the clipboard work
 
