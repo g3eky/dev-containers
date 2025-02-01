@@ -1,7 +1,8 @@
+-- colorschemes setup
+
 return {
   "catppuccin/nvim",
   name = "catppuccin",
-  lazy = false,
   config = function()
     vim.o.termguicolors = true
 
