@@ -29,4 +29,7 @@ Containers that can be used for development
         - [ ] C
     - [x] Autopairs
     - [x] Git integration
+    - [ ] Treesitter
+        - [x] Treesitter syntax highlighting
+        - [ ] Preload Treesitter syntax files
 

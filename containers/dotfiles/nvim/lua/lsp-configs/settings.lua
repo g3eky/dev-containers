@@ -1,3 +1,7 @@
+-- Remove diagnostic icons on the left
+vim.diagnostic.config({signs=false})
+
+
 local set_keymaps = function(_, _)
   vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
   vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
@@ -9,5 +13,12 @@ local set_keymaps = function(_, _)
   vim.keymap.set("n", "<F9>", vim.lsp.buf.hover, {})
 end
 
-return set_keymaps
+
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+
+return {
+  set_keymaps = set_keymaps,
+  capabilities = capabilities
+}
 
